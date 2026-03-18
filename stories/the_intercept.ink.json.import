@@ -1,0 +1,15 @@
+[remap]
+
+importer="inkgd.ink.json"
+type="Resource"
+uid="uid://cfx0pdj6nrhxs"
+path="res://.godot/imported/the_intercept.ink.json-4c0f027eb1af85f5709000457e471ac7.res"
+
+[deps]
+
+source_file="res://stories/the_intercept.ink.json"
+dest_files=["res://.godot/imported/the_intercept.ink.json-4c0f027eb1af85f5709000457e471ac7.res"]
+
+[params]
+
+compress=true

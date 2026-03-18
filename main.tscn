@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://lw8fc8lnnxji"]
+
+[ext_resource type="Script" uid="uid://bdraco87ox6lq" path="res://dialouge_reader.gd" id="1_ig7tw"]
+[ext_resource type="Resource" uid="uid://cfx0pdj6nrhxs" path="res://stories/the_intercept.ink.json" id="2_0xm2m"]
+
+[node name="Main" type="Node2D" unique_id=1182652463]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1187008281]
+
+[node name="DialougeReader" type="Control" parent="CanvasLayer" unique_id=407814129 node_paths=PackedStringArray("display_label", "button_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_ig7tw")
+ink_file = ExtResource("2_0xm2m")
+display_label = NodePath("VBoxContainer/RichTextLabel")
+button_container = NodePath("VBoxContainer/VBoxContainer")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialougeReader" unique_id=1044708140]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/DialougeReader/VBoxContainer" unique_id=562985422]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+bbcode_enabled = true
+scroll_following = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DialougeReader/VBoxContainer" unique_id=1535804532]
+layout_mode = 2
+alignment = 1
