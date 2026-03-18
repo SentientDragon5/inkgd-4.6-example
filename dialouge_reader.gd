@@ -24,7 +24,6 @@ func _continue_story():
 	var text = story.continue_story_maximally()
 	
 	if text:
-		# Use BBCode to keep the current text white/default
 		display_label.append_text(text + "\n")
 	
 	if story.current_choices.size() > 0:
@@ -41,14 +40,9 @@ func _display_choices():
 		button_container.add_child(btn)
 
 func _on_choice_selected(index: int):
-	# 1. Get the current full text
 	var full_content = display_label.get_parsed_text()
-	
-	# 2. Clear the label and re-add everything wrapped in a grey color tag
 	display_label.clear()
 	display_label.append_text("[color=#888888]" + full_content + "[/color]")
-	
-	# 3. Add the player's choice in a different color to show the history branch
 	var choice_text = story.current_choices[index].text
 	display_label.append_text("\n[color=#aaaaaa]> " + choice_text + "[/color]\n\n")
 	
